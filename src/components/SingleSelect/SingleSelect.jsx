@@ -8,7 +8,7 @@ export default function SingleSelect({
     onClickHandle,
     showSelected = true,
 }) {
-    const [isVisible, setIsIvisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     return (
         <div className="single-select">
@@ -16,7 +16,7 @@ export default function SingleSelect({
                 className={`single-select__container ${
                     isVisible ? 'single-select__container--visible' : ''
                 }`}
-                onClick={() => setIsIvisible(!isVisible)}
+                onClick={() => setIsVisible(!isVisible)}
             >
                 {selectedOption.value}
             </div>
@@ -35,7 +35,7 @@ export default function SingleSelect({
                         }`}
                         onClick={() => {
                             onClickHandle(option);
-                            setIsIvisible(false);
+                            setIsVisible(false);
                         }}
                         aria-disabled={option.id === selectedOption.id}
                     >

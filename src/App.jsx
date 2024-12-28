@@ -2,8 +2,6 @@ import { useState } from 'react';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 
 function App() {
-    const [selectedOption, setSelectedOption] = useState({ id: null, value: 'Select an option' });
-
     const options = [
         {
             id: null,
@@ -30,6 +28,8 @@ function App() {
             value: 'Option 5',
         },
     ];
+
+    const [selectedOption, setSelectedOption] = useState(options[0]);
 
     return (
         <>
